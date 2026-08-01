@@ -163,6 +163,42 @@ Creación de vista top 5 usuarios
 Creación de índice
 <img width="923" height="176" alt="9" src="https://github.com/user-attachments/assets/8368395f-92f5-4bba-810d-dfe24b0438c5" />
 
+## Diagrama Modelo Entidad Relación:
+Para la creación del diagrama se uso la herramienta web: https://dbdiagram.io/d
+Adjuntando el siguiente código:
+
+Table moneda {
+  currency_id int [pk]
+  currency_name varchar
+  currency_symbol varchar
+}
+
+Table usuario {
+  user_id int [pk]
+  nombre varchar
+  correo_electronico varchar
+  contrasena varchar
+  saldo decimal
+  fecha_creacion timestamp
+  currency_id int
+}
+
+Table transaccion {
+  transaction_id int [pk]
+  sender_user_id int
+  receiver_user_id int
+  currency_id int
+  importe decimal
+  transaction_date timestamp
+}
+
+Ref: usuario.currency_id > moneda.currency_id
+Ref: transaccion.sender_user_id > usuario.user_id
+Ref: transaccion.receiver_user_id > usuario.user_id
+Ref: transaccion.currency_id > moneda.currency_id
+
+<img width="1694" height="634" alt="12" src="https://github.com/user-attachments/assets/8e728eae-eeea-4214-aa7a-d107d9f6b3d5" />
+
 ## Conclusión:
 El proyecto permitió aplicar los fundamentos de las bases de datos relacionales mediante el diseño e implementación de una billetera digital
 utilizando MySQL. Se creó un modelo de datos normalizado con relaciones entre usuarios, monedas y transacciones, asegurando la integridad 
