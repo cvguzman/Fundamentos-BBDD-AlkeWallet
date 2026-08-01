@@ -88,20 +88,6 @@ con un usuario inexistente, obteniendo un error de restricción de clave foráne
 - **Aislamiento:** Cada transacción mantiene la integridad de los datos durante su ejecución.
 - **Durabilidad:** Las operaciones confirmadas mediane COMMIT permanecen almacenadas en la base de datos.
 
-## Estructura del proyecto:
-
-AlkeWallet/
-|
-├── README.md
-├── AlkeWallet.sql
-├── modelo_ER.jpeg
-└── capturas/
-    ├── create_database.jpeg
-    ├── create_tables.jpeg
-    ├── inserts.jpeg
-    ├── consultas.jpeg
-    ├── commit.jpeg
-    └── rollback.jpeg
 
 ## Evidencias
 El proyecto incluye las siguientes capturas de pantalla
